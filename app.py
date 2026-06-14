@@ -45,4 +45,4 @@ else:
   pagos_anios = st.number_input("Ingrese la canitdad de pagos por año", value=12)
   
   cuota = lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anios)
-  st.write(f"El valor de la cuota es")
+  st.write(f"El valor de la cuota es {cuota}")
