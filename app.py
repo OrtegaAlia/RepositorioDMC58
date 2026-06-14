@@ -1,5 +1,7 @@
 import streamlit as st
+import pandas as pd
 import numpy as np
+import libreria_funciones as lf
 
 st.title("Mi primera aplicación en python")
 
@@ -37,3 +39,10 @@ elif sesion == "Sesión 3":
 
 else:
   st.write("Bienvenido la sesión 4")
+  principal = st.number_imput("Ingrese el monto del prestamo", value=1000)
+  tasa_anual = st.number_imput("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
+  anios = st.number_imput("Ingrese el número de años del prestamo", value=1)
+  pagos_anios = st.number_imput("Ingrese la canitdad de pagos por año", value=12)
+  
+  cuota = lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anios)
+  st.write(f"El valor de la cuota es")
