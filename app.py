@@ -46,3 +46,5 @@ else:
   
   cuota = round(lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anios),2)
   st.write(f"El valor de la cuota es {cuota}")
+
+  archivo = st.sidebar.file_uploader("Cargue su archivo")
