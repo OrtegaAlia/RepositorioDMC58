@@ -56,7 +56,7 @@ else:
     elif archivo.name.endswith(".xlsx"):
         datos = pd.read_excel(archivo)
 
-  st.write(datos)
+    st.write(datos)
 
   else: 
     st.write("Cargue el archivo ")
